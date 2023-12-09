@@ -1,9 +1,10 @@
 import TicketForm from '@/app/(components)/TicketForm'
-import React from 'react'
+import React from 'react';
+import { BASE_API_URL } from '@/app/utils/contants';
 
 const getTicketById = async (id) => {
   
-    const res = await fetch(`${process.env.DEV_URL}/api/Tickets/${id}`, {
+    const res = await fetch(`${BASE_API_URL}/api/Tickets/${id}`, {
       cache: "no-store"
     })
     if(!res.ok){

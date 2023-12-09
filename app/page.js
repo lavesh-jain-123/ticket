@@ -1,9 +1,10 @@
 import React from 'react'
-import TicketCard from './(components)/TicketCard'
+import TicketCard from './(components)/TicketCard';
+import { BASE_API_URL } from './utils/contants';
 
 const getTickets = async () => {
   try {
-    const res = await fetch(`${process.env.DEV_URL}/api/Tickets`, {
+    const res = await fetch(`${BASE_API_URL}/api/Tickets`, {
       cache: "no-store"
     })
 
