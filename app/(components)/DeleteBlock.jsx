@@ -10,7 +10,7 @@ const DeleteBlock = ({id}) => {
   const router = useRouter();
 
   const deleteTicket = async () => {
-    const res = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
+    const res = await fetch(`${process.env.DEV_URL}/api/Tickets/${id}`, {
       method: "DELETE"
     })
 

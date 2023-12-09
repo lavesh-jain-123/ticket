@@ -3,7 +3,7 @@ import TicketCard from './(components)/TicketCard'
 
 const getTickets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tickets", {
+    const res = await fetch(`${process.env.DEV_URL}/api/Tickets`, {
       cache: "no-store"
     })
 
@@ -23,7 +23,7 @@ const Dashboard = async () => {
   const data = await getTickets();
 
 if(!data?.tickets){
-return <p>No tickets.</p>
+return <p>No tickets!!!</p>
 }
 
 const tickets = data.tickets;
